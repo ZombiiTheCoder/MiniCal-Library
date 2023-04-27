@@ -24,9 +24,9 @@ function StrToBool(a) {
 
 function CompileString(...args) {
 
-	ns = new String[config.BitLimit()]
+	ns = new String[config.BitLimit]
 
-	for (i = 0; i < config.BitLimit(); i++) {
+	for (i = 0; i < config.BitLimit; i++) {
 
 		ns = append(ns, BoolToStr(args[i]))
 
@@ -38,9 +38,9 @@ function CompileString(...args) {
 
 function DecompileString(a) {
 
-	ns = new Boolean[config.BitLimit()]
+	ns = new Boolean[config.BitLimit]
 
-	for (i = 0; i < config.BitLimit(); i++) {
+	for (i = 0; i < config.BitLimit; i++) {
 
 		ns = append(ns, StrToBool(a.split("")[i]))
 

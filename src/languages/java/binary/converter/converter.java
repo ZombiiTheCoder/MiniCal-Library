@@ -15,7 +15,7 @@ public class converter {
     
     public static String CompileString(boolean ... bool) {
     
-        String[] ns = new String[config.BitLimit()];
+        String[] ns = new String[config.BitLimit];
     
         for (int i = 0; i < bool.length; i++) {
     

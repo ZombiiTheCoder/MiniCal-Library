@@ -1,6 +1,4 @@
-function BitLimit() {
-	return 16
-}
+let BitLimit = 16
 
 const config = {BitLimit: BitLimit}
 
