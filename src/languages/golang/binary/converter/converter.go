@@ -1,18 +1,15 @@
 package converter
 
 import (
-	config "minical/binary/config"
+	config "minical/languages/golang/binary/config"
 	"strings"
 )
 
 func BoolToStr(a bool) string {
 
-	o := ""
+	o := "0"
 	if a == true {
 		o = "1"
-	}
-	if a == false {
-		o = "0"
 	}
 
 	return o

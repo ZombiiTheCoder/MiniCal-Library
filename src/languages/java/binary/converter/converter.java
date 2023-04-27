@@ -6,9 +6,8 @@ public class converter {
     
     public static String BoolToString(boolean a) {
 
-        String o = "";
+        String o = "0";
         if (a == true) { o = "1"; }
-        if (a == false) { o = "0"; }
     
         return o;
     

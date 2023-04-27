@@ -2,12 +2,9 @@ import { config } from "../config/config.js"
 
 function BoolToStr(a) {
 
-	o = ""
+	o = "0"
 	if (a == true) {
 		o = "1"
-	}
-	if (a == false) {
-		o = "0"
 	}
 
 	return o
