@@ -1,6 +1,11 @@
-from converter import *
-from config import *
-from gates import *
+try:
+    from converter import *
+    from config import *
+    from gates import *
+except:
+    from src.languages.python.binary.converter import *
+    from src.languages.python.binary.config import *
+    from src.languages.python.binary.gates import *
 
 def adder(a, b, carryIn):
     bina = DecompileString(FixBinary(a))
@@ -34,7 +39,4 @@ def subtractor(a, b):
 
     return CompileString(ReverseList(sum))
 
-def multiplier(a, b):
-    exit()
-
-print(subtractor("1000", "1100"))
+# print(subtractor("1000", "1100"))

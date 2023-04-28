@@ -1,4 +1,7 @@
-from config import *
+try:
+    from config import *
+except:
+    from src.languages.python.binary.config import *
 
 def BoolToStr(a):
 

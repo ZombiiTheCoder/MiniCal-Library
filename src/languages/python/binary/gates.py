@@ -10,7 +10,6 @@ def And(a, b) :
 		o=True
 	return o
 
-
 def Nand(a, b) :
 	return Not(And(a, b))
 

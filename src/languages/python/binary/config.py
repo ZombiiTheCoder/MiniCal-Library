@@ -1,1 +1,1 @@
-BitLimit = 2
+BitLimit = 16
