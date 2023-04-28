@@ -4,7 +4,7 @@ import { FixBinary } from "../../src/languages/vanillajs/binary/converter.js"
 let actual=""
 let expected=""
 
-console.log("MiniCalLib(JavaScript) Test")
+console.log("MiniCalLib(Vanilla Js) Test")
 console.log("\n")
 console.log("Test Binary Elongator(Fixer)")
 actual=FixBinary("1010")
@@ -24,7 +24,7 @@ console.log("\n")
 
 
 
-document.body.append("MiniCalLib(JavaScript) Test")
+document.body.append("MiniCalLib(Vanilla) Test")
 document.body.append(document.createElement("br"))
 document.body.append(document.createElement("br"))
 document.body.append("Test Binary Elongator(Fixer)")

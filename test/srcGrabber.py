@@ -1,5 +1,6 @@
 import os
 import shutil
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 def clean():
     try:
         shutil.rmtree("src")

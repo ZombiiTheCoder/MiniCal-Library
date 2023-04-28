@@ -1,7 +1,5 @@
 package binary.config;
 
-public class config {
-
-    public static int BitLimit = 16;
-
+public interface config{
+    public int BitLimit = 16;
 }
