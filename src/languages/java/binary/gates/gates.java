@@ -3,11 +3,19 @@ package binary.gates;
 public class gates {
     
     public static boolean Not(boolean a) {
-        return !a;
+        boolean o = true;
+        if (a == true){
+            o=false;
+        }
+        return o;
     }
     
     public static boolean And(boolean a, boolean b) {
-        return a == b;
+        boolean o = false;
+        if (a == true && b == true){
+            o = true;
+        }
+        return o;
     }
     
     public static boolean Nand(boolean a, boolean b) {

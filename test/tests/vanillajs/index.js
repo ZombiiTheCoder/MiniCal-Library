@@ -1,5 +1,5 @@
-import { adder, subtractor } from "../../src/languages/vanillajs/binary/circuits.js"
-import { FixBinary } from "../../src/languages/vanillajs/binary/converter.js"
+import { adder, subtractor } from "../../../src/languages/vanillajs/binary/circuits.js"
+import { FixBinary } from "../../../src/languages/vanillajs/binary/converter.js"
 
 let actual=""
 let expected=""

@@ -1,7 +1,5 @@
 package binary.converter;
 
-import java.io.ObjectInputFilter.Config;
-
 import binary.config.config;
 
 public class converter {
@@ -18,7 +16,7 @@ public class converter {
     public static boolean StrToBool(String a) {
 
         boolean o = false;
-        if (a == "1") { o = true; }
+        if (a.contains("1")) { o = true; }
     
         return o;
     
@@ -68,17 +66,21 @@ public class converter {
     }
     
     public static String FixBinary(String bin){
-        boolean[] a=ReverseList(DecompileString(bin));
+        boolean[] a = ReverseList(DecompileString(bin));
+        boolean[] a2 = new boolean[config.BitLimit];
         if (config.BitLimit-a.length < 0){
             System.out.println("FATAL ERROR: Number Is Larger Than BitLimit "+String.format("%s", config.BitLimit));
         }
         int e= a.length;
+        for (int i=0; i<e; i++){
+            a2[i] = a[i];
+        }
         if (config.BitLimit-e != 0 || config.BitLimit-e > -1){
             for (int i=0; i<(config.BitLimit-(e)); i++) {
-                a = a + [false];
+                a2[i+(e)] = false;
+            }
         }
-    }
-        return CompileString(ReverseList(a));
+        return CompileString(ReverseList(a2));
     }
 
 

@@ -2,7 +2,7 @@
 
 @echo off
 
-set "JarName=MiniCal(Lib)" 
+set "JarName=MiniCalTest" 
 set "MainClass=test"
 set "KeepSrcOut=false"
 
@@ -24,7 +24,7 @@ DEL "bin\%JarName%.jar" /Q /S
 RMDIR srcOut /Q /S
 Xcopy src\languages\java srcOut /e/h/c/i
 cd srcOut
-@REM CLS
+CLS
 if "%experiments%" == "false" "%javaDir%javac" *.java
 if "%experiments%" == "false" "%javaDir%jar" cf "%JarName%.jar" *.class *
 if "%experiments%" == "false" "%javaDir%jar" --update --verbose --file "%JarName%.jar" --main-class "%MainClass%"
@@ -32,12 +32,13 @@ if "%experiments%" == "false" "%javaDir%jar" --update --verbose --file "%JarName
 if "%experiments%" == "true" "%java%javac" *.java
 if "%experiments%" == "true" "%java%jar" cf "%JarName%.jar" *.class *
 if "%experiments%" == "true" "%java%jar" --update --verbose --file "%JarName%.jar" --main-class "%MainClass%"
-copy "%JarName%.jar" "../bin/"
+copy "%JarName%.jar" "../test/tests/java/test.jar"
 DEL "%JarName%.jar"
 cd ../
 if "%KeepSrcOut%" == "false" RMDIR srcOut /Q /S
-@REM CLS
+CLS
 @REM echo Compilation is done and your "%JarName%.jar" is ready sir.
+@REM copy "bin/%JarName%.jar" "test/tests/java/test.jar"
 @REM if "%experiments%" == "false" "%java%java" -jar "bin/%JarName%.jar"
 
 @REM if "%experiments%" == "true" "%java%java" -jar "bin/%JarName%.jar"

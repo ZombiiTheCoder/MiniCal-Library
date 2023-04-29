@@ -3,9 +3,9 @@ try:
     from config import *
     from gates import *
 except:
-    from src.languages.python.binary.converter import *
-    from src.languages.python.binary.config import *
-    from src.languages.python.binary.gates import *
+    from tests.python.binary.converter import *
+    from tests.python.binary.config import *
+    from tests.python.binary.gates import *
 
 def adder(a, b, carryIn):
     bina = DecompileString(FixBinary(a))

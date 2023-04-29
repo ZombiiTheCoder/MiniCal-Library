@@ -1,5 +1,5 @@
-const { FixBinary } = require("../../src/languages/nodejs/binary/converter.js")
-const { adder, subtractor } = require("../../src/languages/nodejs/binary/circuits.js")
+const { FixBinary } = require("./binary/converter.js")
+const { adder, subtractor } = require("./binary/circuits.js")
 let actual=""
 let expected=""
 
