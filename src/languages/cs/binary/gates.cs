@@ -1,39 +1,39 @@
-namespace minicallib_gates{
-    public class gates {
+namespace MinicallibGates{
+    public partial class gates {
         
-        public static boolean Not(boolean a) {
-            boolean o = true;
+        public static bool Not(bool a) {
+            bool o = true;
             if (a == true){
                 o=false;
             }
             return o;
         }
         
-        public static boolean And(boolean a, boolean b) {
-            boolean o = false;
+        public static bool And(bool a, bool b) {
+            bool o = false;
             if (a == true && b == true){
                 o = true;
             }
             return o;
         }
         
-        public static boolean Nand(boolean a, boolean b) {
+        public static bool Nand(bool a, bool b) {
             return Not(And(a, b));
         }
         
-        public static boolean Nor(boolean a, boolean b) {
+        public static bool Nor(bool a, bool b) {
             return And(Not(a), Not(b));
         }
         
-        public static boolean Or(boolean a, boolean b) {
+        public static bool Or(bool a, bool b) {
             return Not(And(Not(a), Not(b)));
         }
         
-        public static boolean Xor(boolean a, boolean b) {
+        public static bool Xor(bool a, bool b) {
             return Or(And(Not(a), b), And(a, Not(b)));
         }
         
-        public static boolean Xnor(boolean a, boolean b) {
+        public static bool Xnor(bool a, bool b) {
             return Not(Or(And(Not(a), b), And(a, Not(b))));
         }
         
