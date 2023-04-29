@@ -33,9 +33,7 @@ namespace MinicallibConverter{
         
             }
         
-            string s = String.Join("", ns);
-
-            return s;
+            return String.Join("", ns);;
         
         }
         

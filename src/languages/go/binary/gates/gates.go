@@ -1,11 +1,19 @@
 package gates
 
 func Not(a bool) bool {
-	return !a
+	o := true
+	if a == true {
+		o = false
+	}
+	return o
 }
 
 func And(a, b bool) bool {
-	return a == b
+	o := false
+	if a == true && b == true {
+		o = true
+	}
+	return o
 }
 
 func Nand(a, b bool) bool {

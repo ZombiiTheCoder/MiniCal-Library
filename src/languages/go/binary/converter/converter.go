@@ -1,7 +1,7 @@
 package converter
 
 import (
-	config "minical/languages/golang/binary/config"
+	"minical/languages/go/binary/config"
 	"strings"
 )
 
@@ -19,7 +19,7 @@ func BoolToStr(a bool) string {
 func StrToBool(a string) bool {
 
 	o := false
-	if a == "1" {
+	if strings.Contains(a, "1") {
 		o = true
 	}
 
@@ -41,16 +41,16 @@ func CompileString(args ...bool) string {
 
 }
 
-func DecompileString(a string) []bool {
+// func DecompileString(a string) []bool {
 
-	ns := make([]bool, config.BitLimit())
+// 	ns := make([]bool, config.BitLimit())
 
-	for i := 0; i < config.BitLimit(); i++ {
+// 	for i := 0; i < config.BitLimit(); i++ {
 
-		ns = append(ns, StrToBool(strings.Split(a, "")[i]))
+// 		ns = append(ns, StrToBool(strings.Split(a, "")[i]))
 
-	}
+// 	}
 
-	return ns
+// 	return ns
 
-}
+// }
