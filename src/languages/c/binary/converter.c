@@ -1,4 +1,5 @@
 #include "../include/converter.h"
+#include "../include/config.h"
 
 bool CharToBool(char a){
 
@@ -33,5 +34,5 @@ bool* ReverseBoolList(bool* a){
 char* ExtendBinary(char* a){
 
 
-    
+
 }

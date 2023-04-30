@@ -3,3 +3,4 @@ folders.bat
 __pycache__
 obj
 net6.0
+.vscode
