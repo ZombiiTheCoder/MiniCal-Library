@@ -3,6 +3,7 @@ package converter
 import (
 	"fmt"
 	"minicallib/binary/config"
+	"os"
 	"strconv"
 	"strings"
 )
@@ -45,7 +46,7 @@ func CompileString(args []bool) string {
 
 func DecompileString(a string) []bool {
 
-	ns := make([]bool, len([]rune(a)))
+	ns := make([]bool, 0)
 	for i := 0; i < len([]rune(a)); i++ {
 		ns = append(ns, StrToBool(string([]rune(a)[i])))
 	}
@@ -66,9 +67,9 @@ func ReverseList(l []bool) []bool {
 func FixBinary(bin string) string {
 	a := ReverseList(DecompileString(bin))
 	a2 := make([]bool, config.BitLimit())
-	fmt.Println(len(DecompileString(bin)))
 	if config.BitLimit()-len(a) < 0 {
 		fmt.Println("FATAL ERROR: Number Is Larger Than BitLimit " + strconv.Itoa(config.BitLimit()))
+		os.Exit(1)
 	}
 	e := len(a)
 	for i := 0; i < e; i++ {
