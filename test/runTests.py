@@ -37,6 +37,7 @@ t=int(input("[?]: "))
 
 if (t == 0):
     PythonGrab()
+    # Works When Python Lib is Pulled From src/languages/python
     from tests.python.test import test as PythonTest
     PythonTest()
     PythonClean()
