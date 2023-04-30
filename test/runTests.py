@@ -4,8 +4,11 @@ import shutil
 from tests.python.LibGrabber import clean as PythonClean
 from tests.python.LibGrabber import Grab as PythonGrab
 
-from tests.nodejs.LibGrabber import clean as NodeClean
-from tests.nodejs.LibGrabber import Grab as NodeGrab
+from tests.js.LibGrabber import cleanES as EsClean
+from tests.js.LibGrabber import GrabEs as EsGrab
+
+from tests.js.LibGrabber import cleanNode as NodeClean
+from tests.js.LibGrabber import GrabNode as NodeGrab
 
 from tests.java.LibGrabber import clean as JavaClean
 from tests.java.LibGrabber import Grab as JavaGrab
@@ -22,10 +25,11 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 print("""
 
 [0] Python
-[1] Nodejs
-[2] Java
-[3] Cs
-[4] Go
+[1] Nodejs : Es6_Modules
+[2] Nodejs : Node_Modules
+[3] Java
+[4] Cs
+[5] Go
 
 """)
 
@@ -36,27 +40,29 @@ if (t == 0):
     from tests.python.test import test as PythonTest
     PythonTest()
     PythonClean()
-    
 
 if (t == 1):
+    EsGrab()
+    os.system("node test.mjs")
+    EsClean()
+    
+if (t == 2):
     NodeGrab()
-    # os.chdir("tests/nodejs")
     os.system("node test.js")
     NodeClean()
 
-if (t == 2):
+if (t == 3):
     JavaGrab()
-    # os.chdir("tests/java")
     os.system("java -jar test.jar")
     JavaClean()
 
-if (t == 3):
+if (t == 4):
     CsGrab()
     os.system("dotnet build")
     os.system(r".\bin\Debug\net6.0\minicallib.exe")
     CsClean()
 
-if (t == 4):
+if (t == 5):
     GoGrab()
     os.system("go run .")
     GoClean()

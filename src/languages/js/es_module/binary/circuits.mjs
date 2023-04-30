@@ -1,6 +1,6 @@
-import { DecompileString, CompileString, FixBinary, ReverseList } from "./converter.js"
-import { BitLimit } from "./config.js"
-import { Not, And, Nand, Nor, Or, Xor, Xnor} from "./gates.js"
+import { DecompileString, CompileString, FixBinary, ReverseList } from "./converter.mjs"
+import { BitLimit } from "./config.mjs"
+import { Not, And, Nand, Nor, Or, Xor, Xnor} from "./gates.mjs"
 
 export function adder(a, b, carryIn){
     let bina = DecompileString(FixBinary(a))

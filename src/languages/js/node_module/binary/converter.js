@@ -1,6 +1,6 @@
-import { BitLimit } from "./config.js"
+const { BitLimit } = require("./config.js")
 
-export function BoolToStr(a){
+function BoolToStr(a){
 
 	let o = "0"
 	if (a == true){
@@ -11,7 +11,7 @@ export function BoolToStr(a){
 }
 
 
-export function StrToBool(a){
+function StrToBool(a){
 
 	let o = false
 	if (a == "1"){
@@ -21,7 +21,7 @@ export function StrToBool(a){
 	return o
 }
 
-export function CompileString(boolr){
+function CompileString(boolr){
 
 	let ns = new Array(BitLimit)
 
@@ -33,7 +33,7 @@ export function CompileString(boolr){
 }
 
 
-export function DecompileString(a){
+function DecompileString(a){
 
 	let ns = new Array(a.split("").length)
 	for (let i=0; i<a.split("").length; i++) {
@@ -42,7 +42,7 @@ export function DecompileString(a){
 	return ns
 }
 
-export function ReverseList(l){
+function ReverseList(l){
 	let e=l.length-1
 	let l2=new Array(l.length)
 	for (let i=0; i<l.length; i++) {
@@ -53,7 +53,7 @@ export function ReverseList(l){
 	return l2
 }
 
-export function FixBinary(bin){
+function FixBinary(bin){
 	let a=ReverseList(DecompileString(bin))
 	if (BitLimit-a.length < 0){
 		console.error("FATAL ERROR: Number Is Larger Than BitLimit "+String(BitLimit))
@@ -67,3 +67,5 @@ export function FixBinary(bin){
 }
 	return CompileString(ReverseList(a))
 }
+
+module.exports = { StrToBool, BoolToStr, CompileString, DecompileString, ReverseList, FixBinary }
