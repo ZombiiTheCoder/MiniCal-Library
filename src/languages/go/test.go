@@ -12,7 +12,7 @@ func main() {
 	actual := ""
 	expected := ""
 
-	fmt.Println("MiniCalLib(Cs) Test")
+	fmt.Println("MiniCalLib(Go) Test")
 	fmt.Println("")
 	fmt.Println("Test Binary Elongator(Fixer)")
 	actual = converter.FixBinary("1010")
