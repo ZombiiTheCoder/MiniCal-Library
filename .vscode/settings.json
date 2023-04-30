@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "converter.h": "c",
+        "config.h": "c",
+        "string.h": "c"
+    }
+}
